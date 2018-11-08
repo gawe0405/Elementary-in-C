@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int month,monthDays,currentYear;
+    do
+        {
+             printf("Input month:");
+             scanf("%d",&month);
+        }
+    while (month>12);
+    switch (month)
+    {
+        case 2:
+            printf("What's current year is:");
+            scanf("%d",&currentYear);
+            if (currentYear % 4 == 0)
+                {
+                    monthDays=29;
+                }
+            else
+                {
+                    monthDays=28;
+                }
+            break;
+        case 4 :
+        case 6 :
+        case 9 :
+        case 11 :
+            monthDays=30;
+            break;
+        default:
+            monthDays=31;
+            break;
+    }
+    printf("Month %d has: %d days",month,monthDays);
+    return 0;
+}
