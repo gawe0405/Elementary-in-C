@@ -1,0 +1,5 @@
+/*
+fflush
+Clear buffer Input
+Syxtan: fflush(stdin);
+*/
