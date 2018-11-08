@@ -1,0 +1,24 @@
+/*
+This program Declare a variable which has the age of the person. Print the user’s name as many times
+as his age.
+Coder  Nguyen Phuc Duy
+
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int personAge;
+    char personName[50];
+    int count;
+    printf("Type your name:");
+    scanf("%s",personName);
+    printf("Type your age: ");
+    scanf("%d",&personAge);
+    for (count=1;count<=personAge;++count)
+        {
+            printf(" %s is %d year old",personName,personAge);
+        }
+    return 0;
+}
