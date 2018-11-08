@@ -1,0 +1,28 @@
+/*
+This program print the number pyramid.
+1
+12
+123
+1234
+Code by Nguyen Phuc Duy
+Date: 11/08/2018
+*/
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+   int heightLine;
+   int count;
+   int subcount;
+   printf("This program print number pyramid \n Type height line: ");
+   scanf("%d",&heightLine);
+   for (count=1;count<heightLine;++count)
+       {
+          for (subcount=1;subcount<count;subcount++)
+              {
+                  printf("%d",subcount);
+              }
+          printf("\n");
+       }
+    return 0;
+}
