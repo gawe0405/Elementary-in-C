@@ -1,0 +1,33 @@
+*
+This program calculate X^Y. 
+Code by Nguyen Phuc Duy
+Date: 11/08/2018
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int studentMarks;
+    printf("This program calculate the mark of Student \n Type your age:");
+    scanf("%d",&studentMarks);
+    if(studentMarks>75)
+    {
+        printf("Grade A");
+    }
+        else if (studentMarks>60)
+        {
+            printf("Grade B");
+        }
+            else if (studentMarks>45)
+            {
+                printf("Grade C");
+            }
+                 else if (studentMarks>35)
+                {
+                    printf("Grade D");
+                }
+                        else
+                        printf("Grade F");
+    return 0;
+}
