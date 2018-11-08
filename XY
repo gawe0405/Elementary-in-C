@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int numberX,numberY,power;
+    power = 1;
+    int count =1;
+    char answer;
+    do
+    {
+        printf("This program print Power(x,y) or X^Y \n");
+        printf("Type X:");
+        scanf("%d",&numberX);
+        printf("Type Y:");
+        scanf("%d",&numberY);
+        for(count=0;count<numberY;++count)
+        {
+            power=power*numberX;
+        }
+        printf("%d^%d=%d",numberX,numberY,power);
+        printf("\n Do you want to countinue?[Y/N]:");
+        //scanf("%c",&answer);
+        fflush(stdin);
+        answer=getchar();
+    }
+    while (answer == 'Y'||answer == 'y');
+
+    return 0;
+}
