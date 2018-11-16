@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int nums,cnt1,cnt2,tg;                  //tg la bien trung gian de sap xep
+    printf("Hay nhap so phan tu: ");
+    scanf("%d",&nums);
+    int ary[nums],ary2[nums],ary3[nums/2];  //ary2 la mang backup, ary3 la mang bao gom phan tu chan binh phuong
+    for(cnt1=0;cnt1<nums;cnt1++)           //vong lap tao mang
+    {
+        printf("Phan tu thu %d: ",cnt1);
+        scanf("%d",&ary[cnt1]);
+    }
+    for(cnt1=0;cnt1<nums;cnt1++)        //vong lap tao mang backup
+    {
+        ary2[cnt1]=ary[cnt1];
+    }
+    for(cnt1=0;cnt1<nums-1;cnt1++)      //vong lap sap xep
+    {
+        for(cnt2=cnt1+1;cnt2<nums;cnt2++)
+        {
+            if(ary[cnt1]>ary[cnt2])
+            {
+                tg=ary[cnt1];
+                ary[cnt1]=ary[cnt2];
+                ary[cnt2]=tg;
+            }
+        }
+    }
+    printf("Mang sau khi sap xep tang dan: \n");
+    for(cnt1=0;cnt1<nums;cnt1++)
+    {
+        printf("    %d   \n",ary[cnt1]);
+    }
+    printf("Mang binh phuong cac phan tu o vi tri chan\n");
+    for(cnt1=0;cnt1<nums;cnt1=cnt1+2)       //vong lap tao binh phuong o vi tri chan
+    {
+        ary3[cnt1/2]=ary2[cnt1]*ary2[cnt1];
+        printf("Phan tu thu %d: %d\n",cnt1/2,ary3[cnt1/2]);
+    }
+    return 0;
+}
